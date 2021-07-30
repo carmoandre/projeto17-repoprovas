@@ -24,6 +24,10 @@ const Container = styled.div`
 const Logo = styled.p`
     font-family: "Fredericka the Great", cursive;
     font-size: 80px;
+
+    @media (max-width: 450px) {
+        font-size: 60px;
+    }
 `;
 
 const ButtonsHolder = styled.div`
@@ -31,6 +35,10 @@ const ButtonsHolder = styled.div`
     justify-content: space-between;
     width: 436px;
     margin-top: 30px;
+    @media (max-width: 450px) {
+        width: 327px;
+        justify-content: space-around;
+    }
 `;
 
 const FilterButton = styled.button`
@@ -46,5 +54,10 @@ const FilterButton = styled.button`
     &:hover {
         background: #40d1c7;
         cursor: pointer;
+    }
+
+    @media (max-width: 450px) {
+        width: 130px;
+        font-size: 15px;
     }
 `;
