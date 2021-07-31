@@ -1,17 +1,30 @@
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 import { IoHome, IoAddCircle } from "react-icons/io5";
 
 export default function Header() {
+    const history = useHistory();
+
+    function goHome() {
+        history.push("/");
+    }
+
+    function goToUpload() {
+        history.push("/upload");
+    }
+
     return (
         <>
             <Container>
                 <HeaderButton>
                     <HomeIcon />
-                    <ButtonText>início</ButtonText>
+                    <ButtonText onClick={() => goHome()}>início</ButtonText>
                 </HeaderButton>
                 <HeaderButton>
                     <UploadIcon />
-                    <ButtonText>enviar prova</ButtonText>
+                    <ButtonText onClick={() => goToUpload()}>
+                        enviar prova
+                    </ButtonText>
                 </HeaderButton>
             </Container>
             <TopDistance />
